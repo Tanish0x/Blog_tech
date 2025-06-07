@@ -1,101 +1,106 @@
-import Image from "next/image";
+import ByCategory from "@/components/by-category";
+import FeaturedPosts from "@/components/featured-posts";
+import News from "@/components/news";
+import PostCard from "@/components/post-card";
+import Posts from "@/components/posts";
+import Posts2 from "@/components/posts2";
+import SidebarPosts from "@/components/sidebar-post";
+import Slider from "@/components/slider";
+import SubscribeBanner from "@/components/subscribe-banner";
+import TrendingNotif from "@/components/trending-notif";
+
+const sliderArc = [
+  {
+    id: 1,
+    title: "Transform Your Bathroom with Simple and Affordable Upgrades",
+    image: "https://picsum.photos/id/17/200/300",
+    date: "December 4, 2023",
+    category: "Home Improvement",
+  },
+  {
+    id: 2,
+    title:
+      "Unlocking Culinary Bliss: Revamping Your Kitchen for Effortless Delight",
+    image: "https://picsum.photos/id/18/200/300",
+    date: "December 4, 2023",
+    category: "Kitchen Design",
+  },
+  {
+    id: 3,
+    title:
+      "Mastering the Art of Tiny Living: Elevate Your Small Apartment Game",
+    image: "https://picsum.photos/id/19/200/300",
+    date: "December 4, 2023",
+    category: "Interior Design",
+  },
+  {
+    id: 4,
+    title:
+      "Crafting a Warm Welcome: Elevate Your Living Space into a Hub of Hospitality",
+    image: "https://picsum.photos/id/20/200/300",
+    date: "December 2, 2023",
+    category: "Home Decor",
+  },
+];
+
+const featuredArticles = [
+  {
+    id: 1,
+    title:
+      "The Impact of Artificial Intelligence on Human Creativity and Intellectual Labor",
+    image: "https://picsum.photos/id/21/200/300",
+    date: "October 4, 2024",
+    category: "Artificial Intelligence",
+    isNew: true,
+  },
+  {
+    id: 2,
+    title: "How Responsible AI Can Mitigate Bias, Inefficiency, and More",
+    image: "https://picsum.photos/id/22/200/300",
+    date: "April 8, 2024",
+    category: "Artificial Intelligence",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      <TrendingNotif />
+      <div className="p-4 pt-0 bg-secondary">
+        <div className="grid md:flex gap-4 w-fit">
+          <Slider
+            className={"max-w-[500px] w-full"}
+            slides={sliderArc.map((i, n) => (
+              <PostCard
+                key={n}
+                title={i.title}
+                image={i.image}
+                category={i.category.split(" ")}
+              />
+            ))}
+          />
+          <div className="grid gap-4">
+            {featuredArticles.map((article, index) => (
+              <PostCard
+                key={index}
+                title={article.title}
+                image={article.image}
+                category={article.category.split(" ")}
+                imageClassName="!h-[200px] !w-[400px]"
+                className="h-[200px] w-[300px]"
+                textClassName="!text-sm  mb-1"
+              />
+            ))}
+          </div>
+          <SidebarPosts />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      <FeaturedPosts />
+      <ByCategory />
+      <Posts />
+      <SubscribeBanner />
+      <Posts2 />
+      <News />
     </div>
   );
 }
