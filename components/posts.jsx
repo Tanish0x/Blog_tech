@@ -42,7 +42,7 @@ export default function Posts() {
             key={article.id}
             title={article.title}
             image={article.image}
-            className={article.id == 14 && "col-span-2"}
+            className={article.id == 14 && "md:col-span-2"}
             textClassName="!text-2xl !-mt-4 text-xl"
             floating={false}
             imageClassName={"!h-[250px]"}
