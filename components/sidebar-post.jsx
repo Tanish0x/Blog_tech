@@ -59,74 +59,39 @@ export default function SidebarPosts({
 
       {/* Articles List */}
       <div className="">
-        {customPost.length &&
-          customPost.map((article) => (
-            <div key={article.id} className="cursor-pointer">
-              <div className="pt-[15px]">
-                <div className="flex gap-4">
-                  {/* Article Image */}
-                  <div className="flex-shrink-0">
-                    <img
-                      src={article.image || "/placeholder.svg"}
-                      alt={article.title}
-                      width={80}
-                      height={80}
-                      className="h-[80px] w-[80px] object-cover"
-                    />
-                  </div>
-
-                  {/* Article Content */}
-                  <Link
-                    href={`/${article.title.split(" ").join("-")}`}
-                    className="flex-1 min-w-0"
-                  >
-                    <h3 className="font-bold text-white text-sm leading-tight mb-2 line-clamp-3">
-                      {article.title}
-                    </h3>
-
-                    <div className="flex items-center text-gray-400 text-xs">
-                      <Clock className="w-3 h-3 mr-1" />
-                      <span>{article.date}</span>
-                    </div>
-                  </Link>
+        {articles.map((article) => (
+          <div key={article.id} className="cursor-pointer">
+            <div className="pt-[15px]">
+              <div className="flex gap-4">
+                {/* Article Image */}
+                <div className="flex-shrink-0">
+                  <img
+                    src={article.image || "/placeholder.svg"}
+                    alt={article.title}
+                    width={80}
+                    height={80}
+                    className="h-[80px] w-[80px] object-cover"
+                  />
                 </div>
+
+                {/* Article Content */}
+                <Link
+                  href={`/${article.title.split(" ").join("-")}`}
+                  className="flex-1 min-w-0"
+                >
+                  <h3 className="font-bold text-white text-sm leading-tight mb-2 line-clamp-3">
+                    {article.title}
+                  </h3>
+
+                  <div className="flex items-center text-gray-400 text-xs">
+                    <Clock className="w-3 h-3 mr-1" />
+                    <span>{article.date}</span>
+                  </div>
+                </Link>
               </div>
             </div>
-          ))}
-        {articles &&
-          articles.map((article) => (
-            <div key={article.id} className="cursor-pointer">
-              <div className="pt-[15px]">
-                <div className="flex gap-4">
-                  {/* Article Image */}
-                  <div className="flex-shrink-0">
-                    <img
-                      src={article.image || "/placeholder.svg"}
-                      alt={article.title}
-                      width={80}
-                      height={80}
-                      className="h-[80px] w-[80px] object-cover"
-                    />
-                  </div>
-
-                  {/* Article Content */}
-                  <Link
-                    href={`/${article.title.split(" ").join("-")}`}
-                    className="flex-1 min-w-0"
-                  >
-                    <h3 className="font-bold text-white text-sm leading-tight mb-2 line-clamp-3">
-                      {article.title}
-                    </h3>
-
-                    <div className="flex items-center text-gray-400 text-xs">
-                      <Clock className="w-3 h-3 mr-1" />
-                      <span>{article.date}</span>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
+          </div>
+        ))}
       </div>
     </div>
   );
