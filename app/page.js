@@ -13,7 +13,7 @@ const sliderArc = [
   {
     id: 1,
     title: "Transform Your Bathroom with Simple and Affordable Upgrades",
-    image: "https://picsum.photos/id/17/200/300",
+    image: "https://picsum.photos/id/17/500/500",
     date: "December 4, 2023",
     category: "Home Improvement",
   },
@@ -21,7 +21,7 @@ const sliderArc = [
     id: 2,
     title:
       "Unlocking Culinary Bliss: Revamping Your Kitchen for Effortless Delight",
-    image: "https://picsum.photos/id/18/200/300",
+    image: "https://picsum.photos/id/18/400/800",
     date: "December 4, 2023",
     category: "Kitchen Design",
   },
@@ -29,7 +29,7 @@ const sliderArc = [
     id: 3,
     title:
       "Mastering the Art of Tiny Living: Elevate Your Small Apartment Game",
-    image: "https://picsum.photos/id/19/200/300",
+    image: "https://picsum.photos/id/19/400/800",
     date: "December 4, 2023",
     category: "Interior Design",
   },
@@ -37,7 +37,7 @@ const sliderArc = [
     id: 4,
     title:
       "Crafting a Warm Welcome: Elevate Your Living Space into a Hub of Hospitality",
-    image: "https://picsum.photos/id/20/200/300",
+    image: "https://picsum.photos/id/20/400/800",
     date: "December 2, 2023",
     category: "Home Decor",
   },
@@ -48,7 +48,7 @@ const featuredArticles = [
     id: 1,
     title:
       "The Impact of Artificial Intelligence on Human Creativity and Intellectual Labor",
-    image: "https://picsum.photos/id/21/200/300",
+    image: "https://picsum.photos/id/21/400/400",
     date: "October 4, 2024",
     category: "Artificial Intelligence",
     isNew: true,
@@ -56,7 +56,7 @@ const featuredArticles = [
   {
     id: 2,
     title: "How Responsible AI Can Mitigate Bias, Inefficiency, and More",
-    image: "https://picsum.photos/id/22/200/300",
+    image: "https://picsum.photos/id/22/400/400",
     date: "April 8, 2024",
     category: "Artificial Intelligence",
   },

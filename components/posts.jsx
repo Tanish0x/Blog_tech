@@ -4,31 +4,31 @@ const featuredArticles = [
   {
     id: 14,
     title: "Iron Mike: The Knockout King and Enduring Legacy of Mike Tyson",
-    image: "https://picsum.photos/id/49/200/300",
+    image: "https://picsum.photos/id/49/800/800",
     date: "April 12, 2024",
   },
   {
     id: 15,
     title: "Martha Stewart: The Empress of Domesticity",
-    image: "https://picsum.photos/id/45/200/300",
+    image: "https://picsum.photos/id/45/400/400",
     date: "April 11, 2024",
   },
   {
     id: 16,
     title: "“Oppenheimer” Screening in Japan Stirs Unease Amid Nuclear Legacy",
-    image: "https://picsum.photos/id/46/200/300",
+    image: "https://picsum.photos/id/46/400/400",
     date: "March 29, 2024",
   },
   {
     id: 17,
     title: "Dive into the Blocky Brilliance: Exploring the World of Minecraft",
-    image: "https://picsum.photos/id/47/200/300",
+    image: "https://picsum.photos/id/47/400/400",
     date: "February 24, 2024",
   },
   {
     id: 18,
     title: "Oinktastic Fun: Exploring the World of Peppa Pig With Us",
-    image: "https://picsum.photos/id/48/200/300",
+    image: "https://picsum.photos/id/48/400/400",
     date: "February 24, 2024",
   },
 ];

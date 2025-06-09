@@ -94,9 +94,17 @@ export default function ByCategory() {
 
                 {/* Article Content */}
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-bold text-white text-sm leading-tight mb-2 line-clamp-3">
-                    {article.title}
-                  </h3>
+                  <Link
+                    href={`/${article.title.split(" ").join("-")}`}
+                    className="flex-1 min-w-0"
+                  >
+                    <h3
+                      className="font-bold text-white text-sm leading-tight mb-2
+                      line-clamp-3"
+                    >
+                      {article.title}
+                    </h3>
+                  </Link>
 
                   <div className="flex items-center text-gray-400 text-xs">
                     <Clock className="w-3 h-3 mr-1" />
@@ -168,13 +176,16 @@ export default function ByCategory() {
                     className="h-[80px] w-[80px] object-cover"
                   />
                 </div>
-
-                {/* Article Content */}
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-bold text-white text-sm leading-tight mb-2 line-clamp-3">
-                    {article.title}
-                  </h3>
-
+                  <Link
+                    href={`/${article.title.split(" ").join("-")}`}
+                    className="flex-1 min-w-0"
+                  >
+                    {/* Article Content */}
+                    <h3 className="font-bold text-white text-sm leading-tight mb-2 line-clamp-3">
+                      {article.title}
+                    </h3>
+                  </Link>
                   <div className="flex items-center text-gray-400 text-xs">
                     <Clock className="w-3 h-3 mr-1" />
                     <span>{article.date}</span>

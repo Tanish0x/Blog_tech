@@ -5,14 +5,14 @@ const featuredArticles = [
     id: 1,
     title:
       "The Impact of Artificial Intelligence on Human Creativity and Intellectual Labor",
-    image: "https://picsum.photos/id/14/200/300",
+    image: "https://picsum.photos/id/14/400/400",
     date: "October 4, 2024",
     category: "Artificial Intelligence",
   },
   {
     id: 2,
     title: "The Deep Sea's Surprising Secret: Oxygen Production in the Dark!",
-    image: "https://picsum.photos/id/15/200/300",
+    image: "https://picsum.photos/id/15/400/400",
     date: "July 24, 2024",
     category: "Science Technology",
   },
@@ -20,7 +20,7 @@ const featuredArticles = [
     id: 3,
     title:
       "Revolutionizing Brain Imaging: A Deep Dive into MIT’s New Microscopy Technology",
-    image: "https://picsum.photos/id/16/200/300",
+    image: "https://picsum.photos/id/16/400/400",
     date: "June 26, 2024",
     category: "Science Technology",
   },
