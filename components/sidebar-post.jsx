@@ -43,7 +43,6 @@ export default function SidebarPosts({
 }) {
   return (
     <div className={className}>
-      {/* Tab Navigation */}
       <div className="flex w-full">
         <button className="flex items-center bg-primary px-3 text-sm w-full hover:bg-red-700 text-white rounded-none h-8 font-medium">
           <Zap className="w-3 h-3 mr-2" />
@@ -57,13 +56,11 @@ export default function SidebarPosts({
         )}
       </div>
 
-      {/* Articles List */}
       <div className="">
         {articles.map((article) => (
           <div key={article.id} className="cursor-pointer">
             <div className="pt-[15px]">
               <div className="flex gap-4">
-                {/* Article Image */}
                 <div className="flex-shrink-0">
                   <img
                     src={article.image || "/placeholder.svg"}
@@ -74,7 +71,6 @@ export default function SidebarPosts({
                   />
                 </div>
 
-                {/* Article Content */}
                 <Link
                   href={`/${article.title.split(" ").join("-")}`}
                   className="flex-1 min-w-0"

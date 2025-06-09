@@ -6,7 +6,6 @@ export default function Footer() {
     <footer className="bg-tertiary text-white">
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Logo and Social Media */}
           <div className="space-y-6">
             <Link href="/" className="block">
               <h1 className="text-4xl font-bold tracking-widest">TECH BlOG</h1>
@@ -113,7 +112,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Recent Posts */}
           <div className="space-y-4">
             <div className="border-b-2 border-primary">
               <div className="bg-primary py-1 uppercase px-2 text-sm font-bold w-fit">

@@ -81,7 +81,6 @@ export default function ByCategory() {
           <div key={article.id} className="cursor-pointer">
             <div className="pt-[15px]">
               <div className="flex gap-4">
-                {/* Article Image */}
                 <div className="flex-shrink-0">
                   <img
                     src={article.image || "/placeholder.svg"}
@@ -92,7 +91,6 @@ export default function ByCategory() {
                   />
                 </div>
 
-                {/* Article Content */}
                 <div className="flex-1 min-w-0">
                   <Link
                     href={`/${article.title.split(" ").join("-")}`}
@@ -126,7 +124,6 @@ export default function ByCategory() {
           <div key={article.id} className="cursor-pointer">
             <div className="pt-[15px]">
               <div className="flex gap-4">
-                {/* Article Image */}
                 <div className="flex-shrink-0">
                   <img
                     src={article.image || "/placeholder.svg"}
@@ -137,7 +134,6 @@ export default function ByCategory() {
                   />
                 </div>
 
-                {/* Article Content */}
                 <Link
                   href={`/${article.title.split(" ").join("-")}`}
                   className="flex-1 min-w-0"
@@ -166,7 +162,6 @@ export default function ByCategory() {
           <div key={article.id} className="cursor-pointer">
             <div className="pt-[15px]">
               <div className="flex gap-4">
-                {/* Article Image */}
                 <div className="flex-shrink-0">
                   <img
                     src={article.image || "/placeholder.svg"}
@@ -181,7 +176,6 @@ export default function ByCategory() {
                     href={`/${article.title.split(" ").join("-")}`}
                     className="flex-1 min-w-0"
                   >
-                    {/* Article Content */}
                     <h3 className="font-bold text-white text-sm leading-tight mb-2 line-clamp-3">
                       {article.title}
                     </h3>
