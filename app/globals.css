@@ -22,3 +22,13 @@ body {
         text-wrap: balance;
     }
 }
+
+/* Hide horizontal scrollbar but allow scrolling */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none;
+}

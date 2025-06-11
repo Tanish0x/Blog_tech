@@ -1,7 +1,9 @@
-import { Clock, Zap, TrendingUp, Clock1 } from "lucide-react";
+"use client";
+import { Clock, Zap, Clock1 } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 
-const articles = [
+const interestingArticles = [
   {
     id: 1,
     title: "Transform Your Bathroom with Simple and Affordable Upgrades",
@@ -35,21 +37,61 @@ const articles = [
   },
 ];
 
+const popularArticles = [
+  {
+    id: 5,
+    title: "The Most Popular Home Gadgets of 2024",
+    image: "https://picsum.photos/id/27/200/300",
+    date: "January 10, 2024",
+    category: "Gadgets",
+  },
+  {
+    id: 6,
+    title: "Top 10 Trending Recipes This Year",
+    image: "https://picsum.photos/id/28/200/300",
+    date: "February 15, 2024",
+    category: "Food",
+  },
+  {
+    id: 7,
+    title: "Best Fitness Apps for Home Workouts",
+    image: "https://picsum.photos/id/29/200/300",
+    date: "March 5, 2024",
+    category: "Fitness",
+  },
+  {
+    id: 8,
+    title: "How Smart Homes Are Changing Our Lives",
+    image: "https://picsum.photos/id/30/200/300",
+    date: "April 1, 2024",
+    category: "Smart Home",
+  },
+];
+
 export default function SidebarPosts({
   className,
   showNav = true,
   customPost = [],
   text = "INTERESTING",
 }) {
+  const [activeTab, setActiveTab] = useState("interesting");
+  const articles = activeTab === "interesting" ? interestingArticles : popularArticles;
+
   return (
     <div className={className}>
       <div className="flex w-full">
-        <button className="flex items-center bg-primary px-3 text-sm w-full hover:bg-red-700 text-white rounded-none h-8 font-medium">
+        <button
+          className={`flex items-center px-3 text-sm w-full rounded-none h-8 font-medium ${activeTab === "interesting" ? "bg-primary text-white hover:bg-red-700" : "border-b-2 border-b-primary text-gray-300 hover:bg-gray-600"}`}
+          onClick={() => setActiveTab("interesting")}
+        >
           <Zap className="w-3 h-3 mr-2" />
-          {text}
+          INTERESTING
         </button>
         {showNav && (
-          <button className="flex items-center border-b-2 border-b-primary px-3 text-sm w-full hover:bg-gray-600 text-gray-300 rounded-none h-8 font-medium">
+          <button
+            className={`flex items-center px-3 text-sm w-full rounded-none h-8 font-medium ${activeTab === "popular" ? "bg-primary text-white hover:bg-red-700" : "border-b-2 border-b-primary text-gray-300 hover:bg-gray-600"}`}
+            onClick={() => setActiveTab("popular")}
+          >
             <Clock1 className="w-3 h-3 mr-2" />
             POPULAR
           </button>

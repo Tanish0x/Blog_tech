@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`max-w-6xl mx-auto py-4 bg-background ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`py-4 bg-background ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
         {children}
