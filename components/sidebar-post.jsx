@@ -7,7 +7,7 @@ const interestingArticles = [
   {
     id: 1,
     title: "Transform Your Bathroom with Simple and Affordable Upgrades",
-    image: "https://picsum.photos/id/23/200/300",
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
     date: "December 4, 2023",
     category: "Home Improvement",
   },
@@ -15,7 +15,7 @@ const interestingArticles = [
     id: 2,
     title:
       "Unlocking Culinary Bliss: Revamping Your Kitchen for Effortless Delight",
-    image: "https://picsum.photos/id/24/200/300",
+    image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80",
     date: "December 4, 2023",
     category: "Kitchen Design",
   },
@@ -23,7 +23,7 @@ const interestingArticles = [
     id: 3,
     title:
       "Mastering the Art of Tiny Living: Elevate Your Small Apartment Game",
-    image: "https://picsum.photos/id/25/200/300",
+    image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80",
     date: "December 4, 2023",
     category: "Small Spaces",
   },
@@ -31,7 +31,7 @@ const interestingArticles = [
     id: 4,
     title:
       "Crafting a Warm Welcome: Elevate Your Living Space into a Hub of Hospitality",
-    image: "https://picsum.photos/id/26/200/300",
+    image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80",
     date: "December 2, 2023",
     category: "Interior Design",
   },
@@ -41,28 +41,28 @@ const popularArticles = [
   {
     id: 5,
     title: "The Most Popular Home Gadgets of 2024",
-    image: "https://picsum.photos/id/27/200/300",
+    image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80",
     date: "January 10, 2024",
     category: "Gadgets",
   },
   {
     id: 6,
     title: "Top 10 Trending Recipes This Year",
-    image: "https://picsum.photos/id/28/200/300",
+    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80",
     date: "February 15, 2024",
     category: "Food",
   },
   {
     id: 7,
     title: "Best Fitness Apps for Home Workouts",
-    image: "https://picsum.photos/id/29/200/300",
+    image: "https://images.unsplash.com/photo-1469398715555-76331a6c7fa0?auto=format&fit=crop&w=800&q=80",
     date: "March 5, 2024",
     category: "Fitness",
   },
   {
     id: 8,
     title: "How Smart Homes Are Changing Our Lives",
-    image: "https://picsum.photos/id/30/200/300",
+    image: "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=800&q=80",
     date: "April 1, 2024",
     category: "Smart Home",
   },
@@ -110,6 +110,7 @@ export default function SidebarPosts({
                     width={80}
                     height={80}
                     className="h-[80px] w-[80px] object-cover"
+                    onError={(e) => { e.target.src = '/placeholder.svg'; }}
                   />
                 </div>
 
